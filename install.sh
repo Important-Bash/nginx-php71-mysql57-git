@@ -8,7 +8,7 @@ echo "*****************************************************";
 LG='\033[0;37m'
 CLOSE='\033[0m'
 echo "\n\n\n"
-echo "${LG} Installing Nginx, PHP7.1, and apache2 \n\n\n ${CLOSE}"
+echo "${LG} Installing Nginx, PHP7.1, Mysql and Git. \n\n\n ${CLOSE}"
 
 # install Nginx, PHP7.1 & apache2
 
@@ -17,7 +17,7 @@ wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
 apt-get install sudo
-apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql apache2 git
+apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql apache2 git || exit
 # apt-get -y install libapache2-mod-rpaf
 
 # nano /etc/apache2/ports.conf
@@ -46,7 +46,7 @@ sudo chown -R www-data:www-data /var/www/html
 sudo -Hu www-data git clone git@github.com:Enorion/se-data.git /var/www/
 
 # Installing Firewall 
-apt-get install ufw
+apt-get install ufw || echo "Installation Failed" && exit
 
 sudo ufw allow 22/tcp
 sudo ufw allow ssh

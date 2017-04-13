@@ -15,9 +15,10 @@ echo "${LG} Installing Nginx, PHP7.1, Mysql and Git. \n\n\n ${CLOSE}"
 apt-get install apt-transport-https lsb-release ca-certificates
 apt-get install software-properties-common python-software-properties
 sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 apt-get install sudo
-apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql apache2 git || exit
+apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql apache2 git certbot || exit
 # apt-get -y install libapache2-mod-rpaf
 
 # nano /etc/apache2/ports.conf

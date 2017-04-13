@@ -18,15 +18,8 @@ sudo add-apt-repository ppa:ondrej/php
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 apt-get install sudo
-apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql apache2 git certbot || exit
+apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql git certbot || exit
 # apt-get -y install libapache2-mod-rpaf
-
-# nano /etc/apache2/ports.conf
-# copy ports.conf file to apache configuration directory
-
-#sudo cp ports.conf /etc/apache2/ports.conf
-#sudo cp apache2.conf /etc/apache2/apache2.conf
-#sudo cp 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 # copy nginx config
 
@@ -35,8 +28,8 @@ ln /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 #sudo cp proxy_params /etc/nginx/proxy_params
 
 # Install git
-git config --global user.name "Enorion"
-git config --global user.email "admin@enorion.de"
+git config --global user.name "Username"
+git config --global user.email "email"
 
 sudo mkdir /var/www/.ssh
 sudo chown -R www-data:www-data /var/www/.ssh/

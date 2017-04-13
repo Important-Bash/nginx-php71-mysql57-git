@@ -43,7 +43,7 @@ sudo -Hu www-data ssh-keygen -t rsa # choose "no passphrase"
 sudo cat /var/www/.ssh/id_rsa.pub
 
 sudo chown -R www-data:www-data /var/www/html
-sudo -Hu www-data git clone git@github.com:Enorion/se-data.git /var/www/
+sudo -Hu www-data git clone git@github.com:Enorion/se-data.git /var/www/*
 
 # Installing Firewall 
 apt-get install ufw || echo "Installation Failed" && exit

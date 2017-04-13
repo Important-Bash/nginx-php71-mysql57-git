@@ -13,9 +13,9 @@ echo "${LG} Installing Nginx, PHP7.1, Mysql and Git. \n\n\n ${CLOSE}"
 # install Nginx, PHP7.1 & apache2
 
 apt-get install apt-transport-https lsb-release ca-certificates
-wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
-apt-get update
+apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
 apt-get install sudo
 apt-get install mysql-server nginx php7.1 php7.1-mbstring php7.1-xml php7.1-pdo php7.1-mysql apache2 git || exit
 # apt-get -y install libapache2-mod-rpaf

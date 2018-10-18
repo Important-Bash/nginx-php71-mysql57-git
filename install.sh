@@ -35,8 +35,8 @@ ln /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 #sudo cp proxy_params /etc/nginx/proxy_params
 
 # Install git
-git config --global user.name "Enorion"
-git config --global user.email "admin@enorion.de"
+git config --global user.name "******"
+git config --global user.email "******"
 
 sudo mkdir /var/www/.ssh
 sudo chown -R www-data:www-data /var/www/.ssh/
